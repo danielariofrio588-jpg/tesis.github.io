@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title> Acceso - EcuaArte Vivo </title>
+    <link rel="stylesheet" href="css/estilos.css" >
+</head>
+<body>
+<header>
+
+    <h1>EcuaArte Vivo</h1>
+
+    <nav>
+
+        <a href="index.html">
+            Inicio
+        </a>
+
+        <a href="index.html#galeria">
+            Galería
+        </a>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="contenedor-formulario">
+        <h2>Iniciar sesión</h2>
+
+        <p>
+            Ingresa para publicar y administrar
+            tus obras.
+        </p>
+
+        <form id="form-login">
+            <label for="correo">
+                Correo electrónico
+            </label>
+
+            <input type="email"id="correo"required>
+            <label for="contrasena">Contraseña</label>
+
+            <input type="password" id="contrasena"minlength="6"required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <div class="separador"></div>
+        <h3>¿No tienes una cuenta? </h3>
+        <p>
+            Utiliza el mismo correo y contraseña
+            escritos arriba para crear tu cuenta.
+        </p>
+        <button type="button"id="btn-registrarse">Crear cuenta</button>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+</script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ECUAarte Vivo - Plataforma digital dedicada al arte ecuatoriano."
+    >
+
+    <title>ECUAarte Vivo - Arte Ecuatoriano</title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+</head>
+
+
+<body>
+
+<header class="encabezado">
+
+    <div class="barra-navegacion">
+
+        <a
+            href="#inicio"
+            class="logo"
+        >
+            ECUA<span>arte</span> Vivo
+        </a>
+
+
+        <nav>
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#galeria">
+                Galería
+            </a>
+
+            <a href="#colonial">
+                Arte Colonial
+            </a>
+
+            <a href="#ceramica">
+                Escultura y Cerámica
+            </a>
+
+            <a href="#acerca">
+                Acerca de
+            </a>
+
+            <span id="zona-usuario"></span>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section
+    id="inicio"
+    class="hero"
+>
+
+    <div class="hero-contenido">
+
+        <div class="hero-texto">
+
+            <p class="etiqueta">
+                Patrimonio Cultural del Ecuador
+            </p>
+
+
+            <h1>
+                El Arte en
+                <span>Ecuador</span>
+            </h1>
+
+
+            <p class="descripcion-hero">
+
+                Desde la cerámica precolombina de la
+                cultura Tolita hasta el expresionismo
+                de Guayasamín, explora la riqueza visual
+                y la identidad de un pueblo plasmada en
+                lienzos, esculturas y murales.
+
+            </p>
+
+
+            <div class="acciones-hero">
+
+                <a
+                    href="#galeria"
+                    class="boton-principal"
+                >
+                    Explorar Galería
+                </a>
+
+
+                <a
+                    href="login.html"
+                    class="boton-secundario"
+                >
+                    Contribuir
+                </a>
+
+            </div>
+
+
+            <div class="estadisticas">
+
+                <div>
+                    <strong>30+</strong>
+                    <span>Obras en colección</span>
+                </div>
+
+                <div>
+                    <strong>500+</strong>
+                    <span>Años de historia</span>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <span>Arte por descubrir</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-imagen">
+
+            <img
+                src="imagenes/solinca.png"
+                alt="Sol de Oro de la Cultura Tolita"
+            >
+
+            <div class="pie-imagen">
+
+                <strong>
+                    Sol de Oro
+                </strong>
+
+                <span>
+                    Cultura Tolita
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="galeria"
+    class="seccion-galeria"
+>
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
+            <p class="etiqueta">
+                Colección Digital
+            </p>
+
+            <h2>
+                Galería de Arte
+                <span>Ecuatoriano</span>
+            </h2>
+
+            <p>
+                Explora nuestra colección de obras
+                representativas del arte ecuatoriano.
+            </p>
+
+        </div>
+
+        <div class="zona-busqueda">
+
+            <input
+                type="search"
+                id="buscar-obras"
+                placeholder="Buscar por título o artista..."
+            >
+
+        </div>
+        <div class="filtros">
+
+            <button
+                type="button"
+                class="filtro activo"
+                data-filtro="todos"
+            >
+                Todas
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="pintura"
+            >
+                Pintura
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="óleo"
+            >
+                Óleo
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="expresionismo"
+            >
+                Expresionismo
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-filtro="abstracto"
+            >
+                Arte Abstracto
+            </button>
+
+        </div>
+
+        <p id="contador-obras">
+            Cargando obras...
+        </p>
+
+        <div id="contenedor-obras">
+
+            <p>
+                Cargando colección...
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="colonial"
+    class="seccion-colonial"
+>
+
+    <div class="contenedor">
+
+        <div class="colonial-grid">
+
+            <div class="texto-cultural">
+
+                <p class="etiqueta">
+                    Siglos XVI - XVIII
+                </p>
+
+
+                <h2>
+                    Arte Colonial en
+                    <span>Ecuador</span>
+                </h2>
+
+
+                <p>
+                    Durante la época colonial, el arte
+                    ecuatoriano recibió una importante
+                    influencia de los estilos europeos
+                    introducidos durante la colonización.
+                    Iglesias y catedrales fueron decoradas
+                    con pinturas y esculturas religiosas
+                    inspiradas principalmente en el barroco
+                    y el rococó.
+                </p>
+
+
+                <p>
+                    La participación de artistas indígenas
+                    y mestizos permitió fusionar elementos
+                    europeos con características culturales
+                    propias de la región, dando origen a una
+                    de las manifestaciones artísticas más
+                    importantes del Ecuador:
+                    <strong>la Escuela Quiteña.</strong>
+                </p>
+
+
+                <h3>
+                    Manuel Chili "Caspicara"
+                </h3>
+
+                <p class="fecha-artista">
+                    1720 - 1796
+                </p>
+
+                <p>
+                    Escultor indígena y uno de los máximos
+                    representantes de la Escuela Quiteña.
+                    El nombre Caspicara significa
+                    "cara de palo". Entre sus obras
+                    representativas se encuentran la
+                    Virgen de la Luz y La Sábana Santa.
+                </p>
+
+
+                <h3>
+                    Bernardo de Legarda
+                </h3>
+
+                <p class="fecha-artista">
+                    1700 - 1773
+                </p>
+
+                <p>
+                    Pintor, escultor, tallador y platero
+                    mestizo especializado en imágenes
+                    religiosas. Su obra más reconocida
+                    es la Virgen de Quito. También
+                    participó en importantes trabajos
+                    religiosos como el Retablo Mayor.
+                </p>
+
+            </div>
+
+
+            <div class="galeria-colonial">
+
+                <article>
+
+                    <img
+                        src="imagenes/virgendelaluz.png"
+                        alt="Virgen de la Luz"
+                    >
+
+                    <p>
+                        Virgen de la Luz
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <img
+                        src="imagenes/sabanasanta.png"
+                        alt="La Sábana Santa"
+                    >
+
+                    <p>
+                        La Sábana Santa
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <img
+                        src="imagenes/virgendequito.png"
+                        alt="Virgen de Quito"
+                    >
+
+                    <p>
+                        Virgen de Quito
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <img
+                        src="imagenes/retablomayor.png"
+                        alt="Retablo Mayor"
+                    >
+
+                    <p>
+                        Retablo Mayor
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="ceramica"
+    class="seccion-ceramica"
+>
+
+    <div class="contenedor">
+
+        <div class="ceramica-grid">
+
+            <div class="imagen-ceramica">
+
+                <img
+                    src="imagenes/ceramica1.png"
+                    alt="Cerámica ecuatoriana tradicional"
+                >
+
+            </div>
+
+
+            <div class="texto-cultural">
+
+                <p class="etiqueta">
+                    Arte Ancestral
+                </p>
+
+
+                <h2>
+                    Escultura y
+                    <span>Cerámica</span>
+                    Ecuatoriana
+                </h2>
+
+
+                <p>
+                    La escultura y la cerámica son
+                    manifestaciones artísticas tradicionales
+                    del Ecuador que han evolucionado a través
+                    de diferentes períodos históricos.
+                </p>
+
+
+                <p>
+                    Desde las culturas precolombinas,
+                    la cerámica fue utilizada tanto para
+                    actividades cotidianas como para
+                    expresiones ceremoniales y artísticas.
+                    Sus formas, colores y representaciones
+                    constituyen importantes testimonios de
+                    la identidad de los pueblos ancestrales.
+                </p>
+
+
+                <p>
+                    En la actualidad, artesanos ecuatorianos
+                    continúan conservando técnicas
+                    tradicionales y conocimientos
+                    transmitidos entre generaciones.
+                </p>
+
+
+                <a
+                    href="#galeria"
+                    class="boton-principal"
+                >
+                    Explorar Galería
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="acerca"
+    class="seccion-acerca"
+>
+
+    <div class="contenedor">
+
+        <div class="acerca-contenido">
+
+            <p class="etiqueta">
+               Mi proyecto
+            </p>
+
+            <h2>
+                ECUA<span>arte</span> Vivo
+            </h2>
+
+
+            <p>
+                Es una plataforma digital
+                orientada a la difusión y visualización
+                del patrimonio artístico ecuatoriano.
+            </p>
+
+
+            <p>
+                El proyecto reúne una colección digital
+                de obras y contenidos relacionados con
+                diferentes etapas y expresiones del arte
+                nacional, facilitando su consulta mediante
+                una experiencia web accesible.
+            </p>
+
+
+            <p>
+                Además de consultar la colección, los
+                usuarios registrados pueden contribuir
+                publicando nuevas obras, administrar sus
+                publicaciones y ampliar progresivamente
+                el contenido disponible en la plataforma.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="contenedor footer-contenido">
+
+        <div>
+
+            <p>
+                Arte, identidad y patrimonio ecuatoriano.
+            </p>
+
+        </div>
+
+        <div>
+
+            <p>Proyecto de Titulación- Daniela Riofrio - 2026 </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/navegacion.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Editar obra - EcuaArte Vivo
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>EcuaArte Vivo</h1>
+
+    <nav>
+
+        <a href="index.html">
+            Inicio
+        </a>
+
+        <a href="mis-obras.html">
+            Mis obras
+        </a>
+
+        <span id="zona-usuario"></span>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="contenedor-formulario">
+
+        <h2>
+            Editar obra
+        </h2>
+
+
+        <form id="form-editar">
+
+            <label for="titulo">
+                Título
+            </label>
+
+            <input
+                type="text"
+                id="titulo"
+                required
+            >
+
+
+            <label for="autor">
+                Autor
+            </label>
+
+            <input
+                type="text"
+                id="autor"
+                required
+            >
+
+
+            <label for="tecnica">
+                Técnica
+            </label>
+
+            <input
+                type="text"
+                id="tecnica"
+                required
+            >
+
+
+            <label for="anio">
+                Año
+            </label>
+
+            <input
+                type="number"
+                id="anio"
+                min="1"
+                max="2100"
+                required
+            >
+
+
+            <label for="descripcion">
+                Descripción
+            </label>
+
+            <textarea
+                id="descripcion"
+                rows="5"
+            ></textarea>
+
+
+            <label for="imagen">
+                Reemplazar imagen
+            </label>
+
+            <input
+                type="file"
+                id="imagen"
+                accept="image/*"
+            >
+
+
+            <p>
+                Si no seleccionas otra imagen,
+                se conservará la actual.
+            </p>
+
+            <button type="submit">
+                Guardar cambios
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/navegacion.js"></script>
+<script src="js/editar-obra.js"></script>
+</body>
+
+</html>
