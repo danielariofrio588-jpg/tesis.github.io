@@ -1,13 +1,14 @@
 console.log("auth.js conectado");
+
 const formularioLogin =
-    document.getElementById(
-        "form-login"
-    );
+    document.getElementById("form-login");
 
 const botonRegistrarse =
-    document.getElementById(
-        "btn-registrarse"
-    );
+    document.getElementById("btn-registrarse");
+
+const mensajeAuth =
+    document.getElementById("mensaje-auth");
+
 
 formularioLogin.addEventListener(
     "submit",
@@ -19,16 +20,27 @@ botonRegistrarse.addEventListener(
     registrarUsuario
 );
 
+
+function mostrarMensaje(texto, tipo) {
+
+    mensajeAuth.textContent = texto;
+
+    mensajeAuth.className =
+        "mensaje-auth " + tipo;
+}
+
+
 async function iniciarSesion(evento) {
 
     evento.preventDefault();
+
+    mostrarMensaje("", "");
 
     const correo =
         document
             .getElementById("correo")
             .value
             .trim();
-
 
     const contrasena =
         document
@@ -38,12 +50,14 @@ async function iniciarSesion(evento) {
 
     if (!correo || !contrasena) {
 
-        alert(
-            "Completa el correo y la contraseña"
+        mostrarMensaje(
+            "Completa el correo y la contraseña.",
+            "error"
         );
 
         return;
     }
+
 
     const {
         data,
@@ -57,16 +71,19 @@ async function iniciarSesion(evento) {
 
             });
 
+
     if (error) {
 
         console.error(error);
 
-        alert(
-            "Correo o contraseña incorrectos"
+        mostrarMensaje(
+            "No se pudo iniciar sesión. Verifica tu correo y contraseña o crea una cuenta.",
+            "error"
         );
 
         return;
     }
+
 
     console.log(
         "Usuario conectado:",
@@ -78,7 +95,10 @@ async function iniciarSesion(evento) {
         "mis-obras.html";
 }
 
+
 async function registrarUsuario() {
+
+    mostrarMensaje("", "");
 
     const correo =
         document
@@ -91,19 +111,28 @@ async function registrarUsuario() {
             .getElementById("contrasena")
             .value;
 
+
     if (!correo || !contrasena) {
 
-        alert("Escribe un correo y una contraseña");
+        mostrarMensaje(
+            "Escribe un correo y una contraseña.",
+            "error"
+        );
 
         return;
     }
+
 
     if (contrasena.length < 6) {
 
-        alert("La contraseña debe tener al menos 6 caracteres");
+        mostrarMensaje(
+            "La contraseña debe tener al menos 6 caracteres.",
+            "error"
+        );
 
         return;
     }
+
 
     const {
         data,
@@ -122,18 +151,34 @@ async function registrarUsuario() {
 
         console.error(error);
 
-        alert(
-            "No se pudo crear la cuenta: " +
-            error.message
+        mostrarMensaje(
+            "No se pudo crear la cuenta. Verifica los datos ingresados.",
+            "error"
         );
+
         return;
     }
+
+
     if (data.session) {
 
-        alert("Cuenta creada correctamente" );
-        window.location.href =
-            "mis-obras.html";
+        mostrarMensaje(
+            "Cuenta creada correctamente.",
+            "exito"
+        );
+
+        setTimeout(function () {
+
+            window.location.href =
+                "mis-obras.html";
+
+        }, 1000);
+
     } else {
-        alert("Cuenta creada. Revisa tu correo para confirmar tu cuenta y luego inicia sesión.");
+
+        mostrarMensaje(
+            "Cuenta creada. Revisa tu correo para confirmar tu cuenta y luego inicia sesión.",
+            "exito"
+        );
     }
 }

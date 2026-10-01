@@ -736,3 +736,25 @@ footer h3 {
         text-align: center;
     }
 }
+.mensaje-auth {
+    display: none;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.mensaje-auth.error {
+    display: block;
+    background: #f8e7e7;
+    border: 1px solid #d9aaaa;
+    color: #8a2020;
+}
+
+.mensaje-auth.exito {
+    display: block;
+    background: #e7f4e9;
+    border: 1px solid #a8cfad;
+    color: #27632f;
+}
